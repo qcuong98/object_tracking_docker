@@ -51,3 +51,5 @@ Visualizing videos are saved in ```{$OUTPUT}\mp4_tracking_results```
 Source code for object detection is built based on [CenterNet](https://github.com/xingyizhou/CenterNet.git)
 
 Source code for object tracking is built based on iou tracking of [High-Speed Tracking-by-Detection Without Using Image Information](https://github.com/bochinski/iou-tracker)
+
+Vehicle Videos Dataset is provided by [AI City Challenge 2020 - Track 1: Multi-Class Multi-Movement Vehicle Counting](https://www.aicitychallenge.org/)'s organizers
