@@ -38,8 +38,8 @@ The bounding box of objects are in pkl format, saved in ```{$OUTPUT}\bboxes```
 
 3. Track objects
 ```
-# Turn on option `visualize` for visualization, turn off for better performance
-cd /app && python test_iou.py [visualize]
+# Turn on argument `--visualize` for visualization, turn off for better performance
+cd /app && python test_iou.py [--visualize]
 ```
 
 Numpy files of tracking are saved in ```{$OUTPUT}\npy_tracking_results```

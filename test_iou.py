@@ -3,7 +3,7 @@ import pickle
 import os
 import json
 import time
-import sys
+import argparse
 from tracker.iou_tracker import *
 path_video = "/mnt/videos"
 path_bbox_dla = "/app/CenterNet/Detection/bboxes"
@@ -29,6 +29,10 @@ def format_bbox(video_name, file_name):
     return data
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--visualize', action='store_true')
+    args = parser.parse_args()
+
     duration = time.time()
     print("Running tracking on ", path_bbox_dla)
     for file_name in os.listdir(path_bbox_dla):
@@ -37,8 +41,7 @@ if __name__ == "__main__":
         data = format_bbox(vid_name, file_name)
         content_video_path = os.path.join(path_video, vid_name+".mp4")
         # results = track_viou_edited(content_video_path, data, 0.3, 0.7, 0.6, 13, 6, "KCF", 1.0)
-        viz = len(sys.argv) >= 2
-        results = track_iou_edited(vid_name, data, 0.3, 0.7, 0.15, 10, path_video, viz)
+        results = track_iou_edited(vid_name, data, 0.3, 0.7, 0.15, 10, path_video, args.visualize)
     # run_tracking_bbox_dla()
     duration = time.time() - duration 
     print("Total tracking time:", duration)
