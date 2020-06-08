@@ -1,5 +1,5 @@
 # Overview 
-This nvidia-docker image comprised of: 
+This nvidia-docker image is comprised of: 
 - Object detection based on CenterNet
 - Object tracking based on IoU overlapping
 
@@ -15,7 +15,7 @@ docker pull qcuong98/object_tracking
 
 ## Download videos and pte-trained model
 - Video folder: [Vehicles](https://drive.google.com/drive/folders/1w9QAbuqD0sEwXnYJfpmSupl8tqh1Mmww)
-- Pre-trained model: [DLA - Vehicles](https://drive.google.com/file/d/1H4d0q0Pn42GY4rYtm9UwHN4-uIyTKx6v/), [DLA - COCO](https://drive.google.com/file/d/1luPC3U-rDRDRWNDHgkIuOdq-XLkj_T2a/)
+- Pre-trained model: [DLA - Vehicles](https://drive.google.com/file/d/1H4d0q0Pn42GY4rYtm9UwHN4-uIyTKx6v/), [DLA - COCO](https://drive.google.com/file/d/1luPC3U-rDRDRWNDHgkIuOdq-XLkj_T2a/), [other models](https://github.com/xingyizhou/CenterNet/blob/master/readme/MODEL_ZOO.md)
 
 ## Run image
 ```
