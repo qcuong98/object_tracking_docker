@@ -4,7 +4,7 @@ This nvidia-docker image is comprised of:
 - Object tracking based on IoU overlapping
 
 <p align="center">
-    <img width="600" height="480" src="pipeline_git.png">
+    <img width="500" height="400" src="https://i.ibb.co/yyP507m/pipeline-git.png">
 </p>
 
 # Usage 
@@ -36,7 +36,7 @@ cd /app/CenterNet/src && python demo_video.py ctdet --arch dla_34 --load_model /
 ```
 The bounding box of objects are in pkl format, saved in ```{$OUTPUT}\bboxes```
 
-3. Track objects
+3. Track objects (currently support vehicles only)
 ```
 # Turn on argument `--visualize` for visualization, turn off for better performance
 cd /app && python test_iou.py [--visualize]

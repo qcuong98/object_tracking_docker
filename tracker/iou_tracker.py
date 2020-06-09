@@ -103,9 +103,6 @@ def track_iou_edited(vid_name, detections, sigma_l, sigma_h, sigma_iou, t_min, p
                     cv2.putText(frame, class_text[class_id]+str(obj_id).zfill(5), (box[0], box[1]), cv2.FONT_HERSHEY_SIMPLEX, 0.75, (0, 255, 0), 2,cv2.LINE_AA) 
             if visualize == True:
                 output.write(frame)
-            # print(idx)
-#         if idx == 900:
-#             break
         idx += 1
     input.release()
     if visualize == True:
