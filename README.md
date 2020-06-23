@@ -22,7 +22,10 @@ docker pull qcuong98/object_tracking
 export VIDEOS=<directory path of videos folder>
 export MODEL=<directory path of pre-trained model file>
 export OUTPUT=<directory path of output folder>
+# Docker versions earlier than 19.03 require nvidia-docker2 and the --runtime=nvidia flag
 docker run -v $VIDEOS:/mnt/videos -v $MODEL:/mnt/model.pth -v $OUTPUT:/app/CenterNet/Detection -it --runtime=nvidia qcuong98/object_tracking
+# Docker versions including and after 19.03, you will use the nvidia-container-toolkit package and the --gpus all flag
+docker run -v $VIDEOS:/mnt/videos -v $MODEL:/mnt/model.pth -v $OUTPUT:/app/CenterNet/Detection -it --gpus=all qcuong98/object_tracking
 ```
 ### From the image shell
 1. Install DCNv2
